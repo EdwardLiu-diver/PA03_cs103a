@@ -286,6 +286,21 @@ app.get('/courses/byInst/:email',
   } 
 )
 
+app.post('/courses/byWord',
+  async (req,res,next) => {
+    const {word} = req.body;
+    if (word != ""){
+      const courses = await Course.find({name:{$regex:word},independent_study:false}).sort({term:1,num:1,section:1})
+      res.locals.courses = courses
+    }else{
+      res.locals.courses = []
+    }
+    res.locals.times2str = times2str
+    //res.json(courses)
+    res.render('courselist')
+  }
+)
+
 app.post('/courses/byInst',
   // show courses taught by a faculty send from a form
   async (req,res,next) => {
