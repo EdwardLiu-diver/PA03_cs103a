@@ -5,5 +5,5 @@ Zihao Liu \
 Tingwei Liu 
 
 ### Instructor:
-Tim Hickey 
+ Tim Hickey 
 
