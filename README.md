@@ -1,13 +1,13 @@
 # PA03_cs103a
-### Collaborators:
+## Collaborators:
 Junhao Wang\
 Zihao Liu \
 Tingwei Liu 
 
-### Instructor:
+## Instructor:
  Tim Hickey 
 
-## Installation
+### Installation
 Download the project from github and download nodejs and npm from https://nodejs.org
 and cd into the folder
 
@@ -28,5 +28,8 @@ and start the project with
 nodemon
 ```
 
-## Local Browser
+### Local Browser
 http://localhost:5500/
+
+### Short Demonstrate
+https://brandeis.zoom.us/rec/share/On-Oatdbt4NpsxqiLl1qxowUqSTI0RarXZPJTlivqoudE5K7y8QPODJC0HaMU4aD.oFD48yQaZkiATG5Q?startTime=1650588483000
