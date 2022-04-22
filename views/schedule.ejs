@@ -1,18 +1,25 @@
-<ul>
-    <% for (course of courses){%>
-        <li> 
+<div class="d-flex flex-wrap">
+    <% for (course of courses) {   
+        %>
+    
+        <div class="p-2 m-2 w-25 border border-primary border-2">          
+            <%= course['subject'] %> <%= course.coursenum %> 
+            <%= course['term'] %>  
             <a href="/schedule/remove/<%= course._id %>">X</a>
-            <%= course['subject'] %>
-            <%= course.coursenum %>
-            <%= course.name %>
-            <%= course.term %>
-            
-        </li>
-    <% } %>
-</ul>
-
-<!--
-    <pre>
-        <%= JSON.stringify(courses,null,5) %>
-    </pre>
--->
+            <br><strong><%= course.name %></strong>
+            <br> Enr/Limit/Waiting: <%= course.enrolled %>/<%= course.limit %>/<%= course.waiting %>
+            <hr> 
+            <span style="color:rgb(23, 33, 177)">
+             <%=course.instructor[0] %>
+             <%=course.instructor[1] %>
+             (<%=course.instructor[2] %>)</span>
+            <br><br>
+            <div class="">
+                <em><%=course.details %></em>
+            </div>
+            <div class="p-3">
+                <%=course.description %>
+            </div>
+        </div>
+        <% } %>
+    </div>
